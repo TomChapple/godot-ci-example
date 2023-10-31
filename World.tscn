@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://062iuucw1pym"]
+[gd_scene load_steps=3 format=3 uid="uid://062iuucw1pym"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_mkqqa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17xum"]
 size = Vector2(64, 64)
@@ -8,6 +10,7 @@ size = Vector2(64, 64)
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_mkqqa")
 
 [node name="Polygon2D" type="Polygon2D" parent="Player"]
 color = Color(0.247059, 0.372549, 0.988235, 1)
