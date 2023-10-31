@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://062iuucw1pym"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17xum"]
+size = Vector2(64, 64)
+
+[node name="World" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="Player"]
+color = Color(0.247059, 0.372549, 0.988235, 1)
+polygon = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_17xum")
+
+[node name="Level" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level"]
+polygon = PackedVector2Array(-384, -512, -384, 192, 384, 192, 384, -512, 768, -512, 768, 512, -768, 512, -768, -512)
+
+[node name="Polygon2D" type="Polygon2D" parent="Level"]
+color = Color(0.811765, 0.321569, 0.211765, 1)
+polygon = PackedVector2Array(-384, -512, -384, 192, 384, 192, 384, -512, 768, -512, 768, 512, -768, 512, -768, -512)
