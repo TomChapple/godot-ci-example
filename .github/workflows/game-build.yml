@@ -13,12 +13,16 @@ jobs:
   export:
     strategy:
       matrix:
-        target: [linux]
+        target: [linux, windows]
         include:
           - target: linux
             name: Linux
             export-config: Linux/X11
             export-extension: .x86_64
+          - target: windows
+            name: Windows
+            export-config: Windows Desktop
+            export-extension: .exe
     name: ${{ matrix.name }} Export
     runs-on: ubuntu-20.04
     container:
