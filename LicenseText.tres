@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://mgwaiplxoewy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mxuwu"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+
+[sub_resource type="SystemFont" id="SystemFont_qjehe"]
+font_names = PackedStringArray("Monospace")
+
+[resource]
+PanelContainer/styles/panel = SubResource("StyleBoxEmpty_mxuwu")
+RichTextLabel/font_sizes/normal_font_size = 10
+RichTextLabel/fonts/normal_font = SubResource("SystemFont_qjehe")
